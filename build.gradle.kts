@@ -5,28 +5,27 @@ plugins {
 
 val versions = providers.gradleProperty("net.labymod.minecraft-versions").get().split(";")
 
-group = "org.example"
+group = "de.jardateien.worldicon"
 version = providers.environmentVariable("VERSION").getOrElse("1.0.0")
 
 labyMod {
-    defaultPackageName = "org.example" //change this to your main package name (used by all modules)
+    defaultPackageName = "de.jardateien.worldicon"
 
     minecraft {
         registerVersion(versions.toTypedArray()) {
             runs {
                 getByName("client") {
-                    // When the property is set to true, you can log in with a Minecraft account
-                    // devLogin = true
+                    devLogin = true
                 }
             }
         }
     }
 
     addonInfo {
-        namespace = "example"
-        displayName = "ExampleAddon"
-        author = "Example Author"
-        description = "Example Description"
+        namespace = "worldicon"
+        displayName = "WorldIcon"
+        author = "JarDateien"
+        description = "Makes the singleplayer world icon regenerate each time the world is loaded, instead of keeping the first icon forever."
         minecraftVersion = "*"
         version = rootProject.version.toString()
     }

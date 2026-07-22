@@ -1,4 +1,4 @@
-rootProject.name = "labymod4-addon-template"
+rootProject.name = "WorldIcon"
 
 pluginManagement {
     val labyGradlePluginVersion = "0.8.1"
