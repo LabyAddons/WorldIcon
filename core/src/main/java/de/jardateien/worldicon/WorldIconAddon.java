@@ -15,8 +15,6 @@ public class WorldIconAddon extends LabyAddon<WorldIconConfiguration> {
     instance = this;
 
     //Laby.labyAPI().labyNetController().loadUniqueIdByNameSync("WorldIcon").ifPresent(uuid -> );
-
-    this.logger().info("Enabled the Addon");
   }
 
   @Override
