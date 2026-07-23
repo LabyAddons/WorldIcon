@@ -4,6 +4,16 @@
       "enabled": {
         "name": "Enabled"
       }
+    },
+    "header": {
+      "general": {
+        "name": "General"
+      }
+    },
+    "joinDiscord": {
+      "name": "Discord Server",
+      "text": "Join",
+      "description": "Click to join the Discord"
     }
   }
 }

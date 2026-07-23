@@ -2,6 +2,7 @@ package de.jardateien.worldicon.v1_18_2.mixins;
 
 import java.nio.file.Path;
 import java.util.Optional;
+import de.jardateien.worldicon.WorldIconAddon;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.server.IntegratedServer;
 import org.objectweb.asm.Opcodes;
@@ -29,7 +30,7 @@ public abstract class MixinGameRenderer {
           opcode = Opcodes.GETFIELD)
   )
   private boolean hasWorldScreenshot(GameRenderer instance) {
-    return this.updateWorldIcon$screenshot;
+    return this.updateWorldIcon$screenshot && WorldIconAddon.instance.configuration().enabled().get();
   }
 
   @Redirect(
