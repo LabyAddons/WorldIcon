@@ -3,17 +3,17 @@
     "settings": {
       "enabled": {
         "name": "Enabled"
+      },
+      "joinDiscord": {
+        "name": "Discord Server",
+        "text": "Join",
+        "description": "Click to join the Discord"
+      },
+      "header": {
+        "general": {
+          "name": "General"
+        }
       }
-    },
-    "header": {
-      "general": {
-        "name": "General"
-      }
-    },
-    "joinDiscord": {
-      "name": "Discord Server",
-      "text": "Join",
-      "description": "Click to join the Discord"
     }
   }
 }

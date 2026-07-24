@@ -20,6 +20,8 @@ public abstract class MixinGameRenderer {
   @Shadow
   protected abstract void takeAutoScreenshot(Path $$0);
 
+  @Shadow
+  private boolean hasWorldScreenshot;
   @Unique
   private boolean updateWorldIcon$screenshot;
 
@@ -30,7 +32,11 @@ public abstract class MixinGameRenderer {
           opcode = Opcodes.GETFIELD)
   )
   private boolean hasWorldScreenshot(GameRenderer instance) {
-    return this.updateWorldIcon$screenshot && WorldIconAddon.instance.configuration().enabled().get();
+    if(WorldIconAddon.instance.configuration().enabled().get()) {
+      return this.updateWorldIcon$screenshot;
+    }
+
+    return this.hasWorldScreenshot;
   }
 
   @Redirect(
